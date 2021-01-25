@@ -7,25 +7,33 @@
     [control]="cardForm.get('cardNumber')" 
     label="Card Number"
   ></app-input>
-  <app-input 
-    [control]="cardForm.get('expiration')" 
-    label="Expiration"
-  ></app-input>
-  <app-input 
+  <div class="columns">   
+    <div class="column">
+      <app-input 
+      [control]="cardForm.get('expiration')" 
+      label="Expiration"
+      ></app-input>
+    </div> 
+    <div class="column">
+    <app-input 
     [control]="cardForm.get('securityCode')" 
     label="Security Code"
-  ></app-input>
-  <button
+    ></app-input>
+    </div> 
+
+  </div>
+  <div class="buttons">
+    <button
     class="button is-primary" 
     [disabled]="cardForm.invalid"
     type="submit"
-  >
+    >
     Submit
   </button>
-  <button class="button is warning" type="button" (click)="onResetClick()" >
+  <button class="button is-warning" type="button" (click)="onResetClick()" >
     Reset
   </button>
-
+</div>
 </form>
 <hr />
 <div>Form Contents: {{cardForm.value | json}} </div>
