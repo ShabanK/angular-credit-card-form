@@ -15,12 +15,17 @@
     [control]="cardForm.get('securityCode')" 
     label="Security Code"
   ></app-input>
-  <button 
+  <button
+    class="button is-primary" 
     [disabled]="cardForm.invalid"
     type="submit"
   >
     Submit
   </button>
+  <button class="button is warning" type="button" (click)="onResetClick()" >
+    Reset
+  </button>
+
 </form>
 <hr />
 <div>Form Contents: {{cardForm.value | json}} </div>
