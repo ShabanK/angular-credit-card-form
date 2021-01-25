@@ -4,12 +4,14 @@ import { ReactiveFormsModule } from "@angular/forms"
 
 import { AppComponent } from './app.component';
 import { CardFormComponent } from './card-form/card-form.component';
+import { InputComponent } from './input/input.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardFormComponent
+    CardFormComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
